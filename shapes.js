@@ -22,7 +22,7 @@ function calculateSquarePerimeter() {
 
     const perimeter = squarePerimeter(value);
 
-    document.getElementById("showSquareResult").innerHTML = `${perimeter}${squareUnits.value}`;
+    document.getElementById("showSquareResult").innerText = `${perimeter}${squareUnits.value}`;
 }
 
     /* Área */
@@ -33,7 +33,7 @@ function calculateSquareArea() {
 
     const area = squareArea(value);
 
-    document.getElementById("showSquareResult").innerHTML = `${area}${squareUnits.value}²`;  
+    document.getElementById("showSquareResult").innerText = `${area}${squareUnits.value}²`;  
 }
 
 /* Triángulo ______________________________________________________________ */
@@ -64,7 +64,7 @@ function calculateTrianglePerimeter() {
 
     const perimeter = trianglePerimeter(baseValue, side1Value, side2Value);
 
-    document.getElementById("showTriangleResult").innerHTML = `${perimeter}${triangleUnits.value}`;
+    document.getElementById("showTriangleResult").innerText = `${perimeter}${triangleUnits.value}`;
 }
 
     /* Área */
@@ -79,7 +79,7 @@ function calculateTriangleArea() {
     const area = triangleArea(baseValue, heightValue);
 
 
-    document.getElementById("showTriangleResult").innerHTML = `${area}${triangleUnits.value}²`;   
+    document.getElementById("showTriangleResult").innerText = `${area}${triangleUnits.value}²`;   
 }
 
 /* Triángulo Isósceles ____________________________________________________ */
@@ -139,9 +139,9 @@ function calculateIsoscelesHeight(){
     console.log(height);
 
     if (result === true) {
-        document.getElementById("showIsoscelesResult").innerHTML = `${heightRounded}${isoscelesUnits.value}`;
+        document.getElementById("showIsoscelesResult").innerText = `${heightRounded}${isoscelesUnits.value}`;
     } else {
-        document.getElementById("showIsoscelesResult").innerHTML = "Los valores que ingresaste no corresponden a un triangulo isósceles, intenta con otros valores";
+        document.getElementById("showIsoscelesResult").innerText = "Los valores que ingresaste no corresponden a un triangulo isósceles, intenta con otros valores";
     }
 }
 
@@ -179,7 +179,7 @@ function circleArea(circleRadio) {
     
         const perimeter = circlePerimeter(value);
     
-        document.getElementById("showCircleResult").innerHTML = `${perimeter}${circleUnits.value}`;
+        document.getElementById("showCircleResult").innerText = `${perimeter}${circleUnits.value}`;
     }
 
     /* Área */
@@ -190,7 +190,7 @@ function circleArea(circleRadio) {
     
         const area = circleArea(value);
     
-        document.getElementById("showCircleResult").innerHTML = `${area}${circleUnits.value}²`;  
+        document.getElementById("showCircleResult").innerText = `${area}${circleUnits.value}²`;  
     }
 
 
