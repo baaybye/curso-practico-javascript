@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Figuras Geométrica | Curso Práctico de JavaScript</title>
+</head>
+<body>
+    <header>
+        <h1>Figuras geométricas</h1>
+        <p>Primer curso práctico de JavaScript.</p>
+    </header>
+
+    <section>
+        <h2>Calcula el perímetro y área de un cuadrado</h2>
+        <form>
+
+            <label for = "squareInput">
+                Escribe cuanto mide cada lado del cuadrado:
+            </label>
+
+            <input type = "number" id = "squareInput">
+
+            <select id = "selectSquareUnits">
+                <option selected value = "u">Unidades</option>
+                <option value = "ha">Hectária</option>
+                <option value = "m">Metro</option>
+                <option value = "cm">Centimetro</option>
+                <option value = "mm">Milimetro</option>
+                <option value = "in">Pulgada</option>
+                <option value = "ft">Pie</option>
+                <option value = "yd">Yarda</option>
+                <option value = "mi">Milla</option>
+
+            </select>
+
+            <button type = "button" onclick = "calculateSquarePerimeter()">
+                Calcular Perímetro
+            </button>
+
+            <button type = "button" onclick = "calculateSquareArea()">
+                Calcular Área
+            </button>
+        </form>
+        <div>
+            <h4>Resultado</h4>
+            <p id = "showSquareResult"></p> 
+        </div>
+    </section>
+
+    <section>
+        <h2>Calcula el perímetro y área de un triángulo</h2>
+        <form>
+
+            <label for = "triangleBaseInput">
+                Escribe cuanto mide la base del triángulo:
+            </label>
+
+            <input type = "number" id = "triangleBaseInput">
+
+            <label for = "triangleSide1Input">
+                Escribe cuanto mide el primer lado del triángulo:
+            </label>
+
+            <input type = "number" id = "triangleSide1Input">
+
+            <label for = "triangleSide2Input">
+                Escribe cuanto mide el segundo lado del triángulo:
+            </label>
+
+            <input type = "number" id = "triangleSide2Input">
+
+            <label for = "triangleHeightInput">
+                Escribe cuanto mide la altura del triángulo:
+            </label>
+
+            <input type = "number" id = "triangleHeightInput">
+
+            <select id = "selectTriangleUnits">
+                <option selected value = "u">Unidades</option>
+                <option value = "ha">Hectária</option>
+                <option value = "m">Metro</option>
+                <option value = "cm">Centimetro</option>
+                <option value = "mm">Milimetro</option>
+                <option value = "in">Pulgada</option>
+                <option value = "ft">Pie</option>
+                <option value = "yd">Yarda</option>
+                <option value = "mi">Milla</option>
+
+            </select>
+
+            <button type = "button" onclick = "calculateTrianglePerimeter()">
+                Calcular Perímetro
+            </button>
+
+            <button type = "button" onclick = "calculateTriangleArea()">
+                Calcular Área
+            </button>
+
+        </form>
+
+        <div>
+            <h4>Resultado</h4>
+            <p id = "showTriangleResult"></p> 
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Calcula la altura de un triángulo isósceles</h2>
+        <form>
+
+            <label for = "isoscelesSideAInput">
+                Escribe cuanto mide el lado A del tríangulo:
+            </label>
+
+            <input type = "number" id = "isoscelesSideAInput">
+
+            <label for = "isoscelesSideBInput">
+                Escribe cuanto mide el lado B del tríangulo:
+            </label>
+
+            <input type = "number" id = "isoscelesSideBInput">
+
+            <label for = "isoscelesSideCInput">
+                Escribe cuanto mide el lado C del tríangulo:
+            </label>
+
+            <input type = "number" id = "isoscelesSideCInput">
+
+            <select id = "selectIsoscelesUnits">
+                <option selected value = "u">Unidades</option>
+                <option value = "ha">Hectária</option>
+                <option value = "m">Metro</option>
+                <option value = "cm">Centimetro</option>
+                <option value = "mm">Milimetro</option>
+                <option value = "in">Pulgada</option>
+                <option value = "ft">Pie</option>
+                <option value = "yd">Yarda</option>
+                <option value = "mi">Milla</option>
+
+            </select>
+
+            <button type = "button" onclick = "calculateIsoscelesHeight()">
+                Calcular Altura
+            </button>
+
+        </form>
+        <div>
+            <h4>Resultado</h4>
+            <p id = "showIsoscelesResult"></p> 
+        </div>
+    </section>
+
+
+    <section>
+        <h2>Calcula el perímetro y área de un círculo</h2>
+        <form>
+
+            <label for = "circleInput">
+                Escribe cuanto mide el radio:
+            </label>
+
+            <input type = "number" id = "circleInput">
+
+            <select id = "selectCircleUnits">
+                <option selected value = "u">Unidades</option>
+                <option value = "ha">Hectária</option>
+                <option value = "m">Metro</option>
+                <option value = "cm">Centimetro</option>
+                <option value = "mm">Milimetro</option>
+                <option value = "in">Pulgada</option>
+                <option value = "ft">Pie</option>
+                <option value = "yd">Yarda</option>
+                <option value = "mi">Milla</option>
+
+            </select>
+
+            <button type = "button" onclick = "calculateCirclePerimeter()">
+                Calcular Perímetro
+            </button>
+
+            <button type = "button" onclick = "calculateCircleArea()">
+                Calcular Área
+            </button>
+        </form>
+        <div>
+            <h4>Resultado</h4>
+            <p id = "showCircleResult"></p> 
+        </div>
+    </section>
+
+    <script src = "./shapes.js"></script>
+</body>
+</html>
