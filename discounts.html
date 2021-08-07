@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Porcentajes y Descuentos | Curso Práctico de JavaScript</title>
+</head>
+<body>
+    <header>
+        <h1>Porcentajes y Descuentos</h1>
+        <p>Segundo curso práctico de JavaScript.</p>
+    </header>
+
+    <section>
+        <h2>Calcula el precio a pagar de tus productos con descuento</h2>
+
+        <form>
+            <label for = "inputPrice">Escribe el precio de tu producto</label>
+            <input id = "inputPrice" type = "number">
+    
+            <label for = "inputDiscount">Escribe el descuento de tu producto</label>
+            <input id = "inputDiscount" type = "number">
+    
+            <button type = "button" onclick = "buttonPriceDiscount(0, 0)">
+                Calcular el precio con descuento
+            </button>
+        </form>
+    
+        <div>
+            <p id = "showResult1"></p>
+        </div>
+        <div>
+            <p id = "showResult2"></p>
+        </div>
+    </section>
+
+    <!-- <section>
+        <h2>Aplicar cupones de Descuento</h2>
+        <h4>Cupones disponibles:</h4>
+        
+        <form>
+            <input type = "radio" id = "anniversaryCoupon" name = "coupons" value = "anniversaryCoupon">
+            <label for = "anniversaryCoupon">5ANNIOS</label>
+
+            <input type = "radio" id = "firstCoupon" name = "coupons" value = "firstCoupon">
+            <label for = "firstCoupon">PRIMERA-COMPRA</label>
+
+            <input type = "radio" id = "summerCoupon" name = "coupons" value = "summerCoupon">
+            <label for = "summerCoupon">VERANO2021</label>
+
+            <input type = "radio" id = "money300Coupon" name = "coupons" value = "money300Coupon">
+            <label for = "money300Coupon">300gratis</label>
+
+            <button type = "button" onclick = "applyCoupons()">Aplicar Cupón</button>
+
+        </form>
+    </section> -->
+
+    <section>
+        <form>
+            <h2>Aplicar cupones de Descuento</h2>
+            <h4>Cupones disponibles:</h4>
+
+            <label for = "inputCoupon">Escribe el descuento de tu producto</label>
+            <input id = "inputCoupon">
+
+            <button type = "button" onclick = "applyCoupons()">Aplicar Cupón</button>
+
+        </form>
+    </section>
+
+    <script src = "discounts.js"></script>
+</body>
+</html>
