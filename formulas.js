@@ -86,3 +86,94 @@ const payingPercentage = 100 - discountPercentage;
 const finalPrice = originalPrice * payingPercentage/100;
 
 console.log(`$${finalPrice}`)
+
+/* Promedio, Mediana y Moda ________________________________________________ */
+
+    /* Promedio */
+const list1 = [100, 200, 300, 500];
+
+const list1Length = list1.length;
+
+/* let list1Sum = 0;
+for (number of list1) {
+    list1Sum += number;
+} */
+
+const list1Sum = list1.reduce(function(accumulator, currentValue) {
+    return accumulator + currentValue;
+})
+
+
+const list1Average = list1Sum/list1Length;
+console.log(list1Average);
+
+    /* Mediana */
+const list2 = [400, 500, 100, 200, 30, 15, 100, 500, 10];
+
+const list2Length = list2.length;
+const median = list2.length / 2;
+
+const sortedList = list2.sort(function(a, b){
+    return a - b;
+});
+
+if (list2Length%2 == 0) {
+    console.log(`${list[median - 1]} y ${list[median]}`)
+} else {
+console.log(list);
+console.log(median);
+
+console.log(`${list[Math.floor(median)]}`)
+}
+
+
+    /* Moda */
+const list3 = [3, 1, 2, 1, 5, 2, 4, 2, 1, 3, 2, 5, 5, 2, 5];
+
+const list3Count = {};
+
+/* const prueba = list3.map(function(element) {
+    if (list3Count[element]) {
+        list3Count[element] += 1;
+    } else {
+        list3Count[element] = 1;
+    }
+}); */
+
+for (const element of list3) {
+    if (list3Count[element]) {
+        list3Count[element] += 1;
+
+    } else {
+        list3Count[element] = 1;
+    }
+}
+
+const arrayList = Object.entries(list3Count).sort(function(a, b){
+    return a[1] - b[1];
+});;
+
+const listMode = arrayList[arrayList.length - 1];
+
+console.log(`La moda es ${listMode[0]} que se repite ${listMode[1]} veces`);
+
+
+    /* Promedio Ponderado */
+const notesList = [10, 10, 9, 8, 8, 8, 7];
+const creditsList = [7, 4, 7, 7, 4, 7, 7];
+
+const multiplyLists = [];
+
+for (i = 0; i < notesList.length; i++){
+    multiplyLists.push(notesList[i] * creditsList[i]);
+}
+
+const creditsSum = creditsList.reduce(function(accumulator, currentValue) {
+    return accumulator + currentValue;
+})
+
+const multipliedListsSum = multiplyLists.reduce(function(accumulator, currentValue) {
+    return accumulator + currentValue;
+})
+
+console.log((multipliedListsSum/creditsSum).toFixed(2));
