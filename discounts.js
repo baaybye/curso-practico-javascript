@@ -13,7 +13,7 @@ function calculatePriceWithDiscount(originalPrice, discountPercentage) {
     return finalPrice;
 }
 
-function buttonPriceDiscount(couponMoney, couponDiscount) {
+function buttonPriceDiscount(couponMoney = 0, couponDiscount = 0) {
     const priceInput = document.getElementById("inputPrice");
     const priceValue = Number(priceInput.value);
 
