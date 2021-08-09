@@ -8,9 +8,9 @@ function listAverage(list) {
         listSum += number;
     } */
 
-    /* const listSum = list.reduce(function(accumulator, currentValue) {
+    const listSum = list.reduce(function(accumulator, currentValue) {
         return accumulator + currentValue;
-    }) */
+    })
 
     return listSum/listLength;
 }
@@ -85,7 +85,7 @@ function listMode(list) {
 function listWeightedAverage(notesList, creditsList) {
     const multiplyLists = [];
 
-    for (i = 0; i < notesList.length; i++){
+    for (let i = 0; i < notesList.length; i++){
         multiplyLists.push(notesList[i] * creditsList[i]);
     }
 
@@ -123,6 +123,8 @@ const subjects = [
 const notes = subjects.map(function(note){
     return note.note;
 })
+
+/* const notes = subjects.map(note => note.note); */
 
 const credits = subjects.map(function(credit){
     return credit.credit;
